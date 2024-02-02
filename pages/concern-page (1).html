@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="landing-page.css">
+
+    <!-- JS -->
+    <script src="script.js"></script>
+    <title>ACCESS</title>
+  </head>
+  <body>
+
+      <!-- NAVBAR -->
+      <nav class="navbar navbar-expand-lg sticky-top w-100 navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="landing-page.html" style="font-family: 'Gabarito', sans-serif;">ACCESS</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <a class="nav-link active" aria-current="page" href="landing-page.html">Home</a>
+              <a class="nav-link" href="rentals-page.html">Rentals</a>
+              <a class="nav-link" href="event-page.html">Events</a>
+              <a class="nav-link" href="concern-page.html">Concerns</a>
+              <!-- <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a> -->
+            </div>
+          </div>
+        </div>
+      </nav>
+    <!-- END NAVBAR -->
+    <div class="container-fluid">
+
+      <div class="concern-cont">
+        <div class="concern-card">
+
+          <div>
+            <div class="card-title">
+              <h3>Send your Concerns!</h3>
+            </div>
+          </div>
+
+          <div class="main-div">
+            <div id="user_info" class="info-div">
+
+              <div class="form-group shadow-none" onfocusin="addClass(this)" onfocusout="removeClass(this)">
+                <label for="student_name">Student Name</label>
+                <input type="text" class="form-control" id="student_name" placeholder="Fullname">
+              </div>
+
+              <div class="form-group shadow-none" onfocusin="addClass(this)" onfocusout="removeClass(this)">
+                <label for="student_email">Student Email</label>
+                <input type="email" class="form-control" id="student_email" placeholder="Email Address">
+              </div>
+
+              <div class="form-group-select" >
+                <div class="form-group" onfocusin="addClass(this)" onfocusout="removeClass(this)">
+                  <label for="exampleFormControlSelect1">Year level</label>
+                  <select class="form-control form-control-lg" id="student_year" placeholder="Select year level">
+                    <option value=" ">Select year</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                  </select>
+                </div>
+
+                <div class="form-group" onfocusin="addClass(this)" onfocusout="removeClass(this)">
+                  <label for="exampleFormControlSelect1">Section</label>
+                  <select class="form-control form-control-lg" id="student_section" placeholder="Select section">
+                    <option value=" ">Select section</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                  </select>
+                </div>
+              </div>
+
+
+              <div class="form group" >
+                <div class="text-form">
+                    <span>You can raise your concerns with confidentiality. You can send your concerns anonymously for private or sensitive purposes.</span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <div class="form-check anonymous-fc">
+                  <label class="form-check-label">
+                    <input type="checkbox" id="anon_cb" class="form-check-input">
+                    Stay Anonymous
+                  </label>
+                </div>
+              </div>
+
+            </div>
+            <div id="concern_info" class="info-div">
+
+              <div class="form-group flex-form-group" onfocusin="addClass(this)" onfocusout="removeClass(this)">
+                <select id="categorySelect" class="form-control form-control-lg" placeholder="Select Category">
+                  <option value=" ">Select Category</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+                <!-- <button id="BTNcategorySelect">drop</button> -->
+              </div>
+
+              <div class="form-group textbox-form">
+                <div>
+                  <div class="concern-title" id="concern_title">
+                    <input type="text" class="form-control" id="user_name" placeholder="Concern Title">
+                  </div>
+                  <div class="concern-body" id="concern_body">
+                    <textarea class="form-control" placeholder="type something..."></textarea>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+
+          <div class="button-div">
+            <div class="form-group">
+              <button id="BTNBack" class="form-group-btn" value="Back">Back</button>
+              <button id="BTNSave" class="form-group-btn" value="Save">Save</button>
+            </div>
+          </div>
+
+
+
+        </div>
+      </div>
+
+
+
+      </div>
+    </div>
+  </section>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<style>
+  body{
+    background: linear-gradient(-45deg, rgb(255, 166, 0), #f36e1b, #161616, rgb(253, 165, 1));
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+  .concern-cont {
+    width: 100%;
+    height: 673px;
+    padding: 100px 10px;
+    
+    /* border: 1px solid black; */
+
+  }
+  .card-title {
+    padding: 15px 0 0 0;
+    color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    font-weight: bold;
+  }
+  .concern-card {
+    width: 75%;
+    height: 550px;
+    margin: 0 auto;
+    flex-shrink: 0;
+    border-radius: 10px;
+    border-radius: 23px;
+    border: 2px solid var(--Outlines, rgba(190, 190, 190, 0.80));
+    background: linear-gradient(120deg, rgba(56, 53, 53, 0.42) 96.05%, rgba(56, 53, 53, 0.06) 105.45%);
+    backdrop-filter: blur(20.646745681762695px);
+  }
+
+  .main-div {
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    /* padding: 50px; */
+
+  }
+
+  .info-div{
+    width: 40%;
+    height: 400px;
+    padding: 13px 23px;
+    flex-wrap: wrap;
+    border-radius: 5px;
+    margin: 10px;
+    /* background: #B1B1B1; */
+    color: rgba(255, 255, 255, 0.8);
+    border: 2px solid var(--Outlines, rgba(190, 190, 190, 0.80));
+
+  }
+
+  .form-group {
+    margin: 10px;
+  }
+
+  .form-group input[type="text"],  .form-group input[type="email"] {
+    width: 90%;
+    background-color: transparent;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    color: #f36e1b;
+  }
+  input{
+    outline:none;
+  }
+  .form-group input:focus{
+    border-color: #f36e1b;
+    outline: none !important;
+    box-shadow: none;
+    
+  }
+  .form-group.focus label{
+    color: #f36e1b;
+    transition: linear 0.3s;
+  }
+
+  .form-group-select {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    
+
+  }
+  #user_info .form-group select {
+    width: 150px;
+    height: 10px;
+    font-size: 1rem;
+    background-color: transparent;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    color: rgba(255, 255, 255, 0.4);
+  }
+.form-group select option{
+    background-color: #222222;
+  }
+
+  #user_info .form-group select.decorated option:checked {
+    box-shadow: 0 0 10px 100px #f36e1b inset;
+   }
+   #categorySelect{
+    background-color: transparent;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    color: rgba(255, 255, 255, 0.8);
+   }
+
+
+  .form-group select:focus{
+    border-color: #f36e1b;
+    outline: none !important;
+    box-shadow: none;
+    
+  }
+  .concern-body textarea{
+    margin-top: 6px;
+    border: none;
+  }
+  .concern-body textarea, .concern-body textarea:focus{
+    background-color: transparent;
+    color: #f36e1b;
+    transition: linear 0.3s;
+    
+  }
+  .textbox-form input{
+    border-bottom: 2px solid #f36e1b;
+  }
+  .concern-body textarea:focus{
+    outline: none !important;
+    box-shadow: none;
+    border-bottom: 2px solid #f36e1b;
+    border-top: 2px solid #f36e1b;
+
+    transition: linear 0.3s;
+  }
+  .text-form {
+    padding: 5px 15px;
+    font-size: 14px;
+  }
+
+  .anonymous-fc {
+    border: 1px solid black;
+    padding: 10px 30px;
+    width: 90%;
+    border-radius: 10px;
+    background: #6c757d;
+  }
+
+  #concern_info .form-group select {
+    /* width: 80%; */
+    width: 100%;
+    height: 10px;
+    font-size: 1rem;
+    /* border-radius: 5px 0px 0px 5px; */
+    border-radius: 5px;
+  }
+
+  #BTNcategorySelect {
+    width: 20%;
+    border:none;
+
+  }
+
+  .flex-form-group {
+    display: flex;
+
+  }
+
+  .textbox-form {
+    /* border: 1px solid black; */
+    width: 95%;
+    height: auto;
+  }
+
+  .concern-title input[type="text"] {
+    width: 100%;
+    height: 45px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.307);
+    border-radius: 5px 5px 0 0;
+  }
+
+  .concern-body textarea {
+    width: 100%;
+    height: 260px;
+    border-radius: 0 0 5px 5px;
+    resize: none;
+  }
+
+  .button-div {
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 80px;
+  }
+
+  .form-group-btn {
+    width: 100px;
+    height: 45px;
+    border-radius: 10px;
+  }
+
+  .footer li, .footer ul {
+    color: rgba(255, 255, 255, 0.9);
+  }
+  .footer h5, .footer p{
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+</style>
+
+
+
+</div>
+<!-- FOOTER -->
+    <div class="container footer">
+      <footer class="py-5">
+        <div class="row">
+          <div class="col-4">
+            <h5>Contacts</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">+(63)912 375 623</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">+(63)947 135 657</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Anonas, Sta. Mesa, Maynila, 1015 Kalakhang Maynila</a></li>
+            </ul>
+          </div>
+
+          <div class="col-4 flex-end">
+            <h5>Social Media</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+            </ul>
+          </div>
+
+          
+
+
+        </div>
+
+        <div class="d-flex justify-content-between py-4 my-4 border-top">
+          <p>© 2023 ACCESS PUP All rights reserved.</p>
+          <ul class="list-unstyled d-flex">
+            <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
+            <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
+            <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+
+<!-- END FOOTER -->
+
+<script>
+  function addClass(element) {
+    element.classList.add('focus');
+  }
+
+  function removeClass(element) {
+    element.classList.remove('focus');
+  }
+  
+</script>
+
+
+
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="js\concern-page.js"></script>
+
+  </body>
+</html>
